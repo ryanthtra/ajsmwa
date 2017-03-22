@@ -1,8 +1,8 @@
 <div class="alert">
   <span class="alert-topic">
-    <span ng-bind="mytopic"></span>
+    {{topic}}
   </span>
-  <span class="alert-description">
-    <span ng-bind="mydescription"></span>
+  <span class="alert-description" ng-transclude>
+    <!--<span ng-bind="mydescription"></span>-->
   </span>
 </div>

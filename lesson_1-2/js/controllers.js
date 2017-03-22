@@ -2,6 +2,9 @@
 parking.controller("parkingCtrl", function($scope)
 {
   $scope.appTitle = "Packt Parking";
+  $scope.alertTopic = "Something went wrong!!!";
+  $scope.alertMessage = "You must inform the plate and color of the car!!!";
+  
   // Binding the car's array to the scope
   $scope.cars = [];
 
