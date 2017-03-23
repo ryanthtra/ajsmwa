@@ -55,11 +55,11 @@
 }
 
 .ng-enter {
-  -webkit-transition: all 5s linear;
-  -moz-transition: all 5s linear;
-  -ms-transition: all 5s linear;
-  -o-transition: all 5s linear;
-  transition: all 5s linear;
+  -webkit-transition: all 1s linear;
+  -moz-transition: all 1s linear;
+  -ms-transition: all 1s linear;
+  -o-transition: all 1s linear;
+  transition: all 1s linear;
   opacity: 0;
 }
 
@@ -68,11 +68,11 @@
 }
 
 .ng-leave {
-  -webkit-transition: all 5s linear;
-  -moz-transition: all 5s linear;
-  -ms-transition: all 5s linear;
-  -o-transition: all 5s linear;
-  transition: all 5s linear;
+  -webkit-transition: all 1s linear;
+  -moz-transition: all 1s linear;
+  -ms-transition: all 1s linear;
+  -o-transition: all 1s linear;
+  transition: all 1s linear;
   opacity: 1;
 }
 
@@ -81,11 +81,11 @@
 }
 
 .ng-hide-add {
-  -webkit-transition: all 5s linear;
-  -moz-transition: all 5s linear;
-  -ms-transition: all 5s linear;
-  -o-transition: all 5s linear;
-  transition: all 5s linear;
+  -webkit-transition: all 1s linear;
+  -moz-transition: all 1s linear;
+  -ms-transition: all 1s linear;
+  -o-transition: all 1s linear;
+  transition: all 1s linear;
   opacity: 1;
 }
 

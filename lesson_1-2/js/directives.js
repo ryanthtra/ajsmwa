@@ -20,7 +20,7 @@ parking.directive("accordion", function()
     transclude: true,
     controller: function($scope, $element, $attrs, $transclude)
     {
-      var accordioItems = [];
+      var accordionItems = [];
 
       var addAccordionItem = function(accordionScope)
       {
