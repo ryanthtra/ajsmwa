@@ -1,10 +1,10 @@
 // Registering the parkingCtrl to the parking module
-parking.controller("parkingCtrl", function($scope)
+parking.controller("parkingCtrl", function($scope, $filter)
 {
-  $scope.appTitle = "Packt Parking";
+  $scope.appTitle = $filter("uppercase")("Packt Parking");
   $scope.alertTopic = "Something went wrong!!!";
   $scope.alertMessage = "You must inform the plate and color of the car!!!";
-  
+
   // Binding the car's array to the scope
   $scope.cars = [];
 

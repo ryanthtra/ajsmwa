@@ -9,31 +9,50 @@
   <script src="js/app.js"></script>
   <script src="js/controllers.js"></script>
   <script src="js/directives.js"></script>
+  <script src="js/filters.js"></script>
   <link rel="stylesheet" href="css/app.css">
 </head>
 
 <!-- Attaching the view to the parkingCtrl -->
 <body ng-controller="parkingCtrl">
   <h3 ng-bind="appTitle"></h3>
+  <input 
+    type="text"
+    ng-model="criteria"
+    placeholder="What are you looking for?"
+  />
   <div ng-show="cars.length > 0">
     <table>
       <thead>
         <tr>
           <th></th>
-          <th>Plate</th>
-          <th>Color</th>
-          <th>Entrance</th>
+          <th>
+            <a href="" ng-click="field = 'plate'; order=!order">
+              Plate
+            </a>
+          </th>
+          <th>
+            <a href="" ng-click="field = 'color'; order=!order">
+              Color
+            </a>
+          </th>
+          <th>
+            <a href="" ng-click="field = 'entrance'; order=!order">
+              Entrance
+            </a>
+          </th>
         </tr>
       </thead>
       <tbody>
         <!-- Iterating over the cars -->
-        <tr ng-repeat="car in cars"
+        <tr ng-repeat="car in cars | filter:criteria | orderBy:field:order"
           ng-class="{selected: car.selected}">
           <!-- Showing the car's plate -->
           <td><input type="checkbox" ng-model="car.selected" /></td>
-          <td><span ng-bind="car.plate"></span></td>
+          <td><span ng-bind="car.plate | uppercase | plate"></span></td>
           <td><span ng-bind="car.color" ng-style="{color: car.color}"></span></td>
-          <td><span ng-bind="car.entrance"></span></td>
+          <td><span ng-bind="car.entrance | date: 'dd/MM/yyyy hh:mm'"></span></td>
+          <!--<td><span ng-bind="car | json"></span></td>-->
         </tr>
       </tbody>
     </table>
