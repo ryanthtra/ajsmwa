@@ -73,11 +73,13 @@
       ng-maxlength="10"
       ng-pattern="/[1-9][A-Z]{3}[0-9]{3,6}/"
     />
-  </form>
-
-  <select 
-    ng-model="car.color"
-    ng-options="color for color in colors">Pick a color</select>
+    <select 
+      ng-model="car.color"
+      ng-options="color for color in colors"
+    >
+      Pick a color
+    </select>
+  </form>  
   <!-- Binding the park function to the click event -->
   <button 
     ng-click="park(car)"
